@@ -1,0 +1,374 @@
+[1mdiff --git a/1.index.js b/1.index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f5bda8d[m
+[1m--- /dev/null[m
+[1m+++ b/1.index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mconsole.log('Hello world')[m
+\ No newline at end of file[m
+[1mdiff --git a/10.whileLoop.js b/10.whileLoop.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a886fd4[m
+[1m--- /dev/null[m
+[1m+++ b/10.whileLoop.js[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m//the while statemet creates a loop that executes a specified statement as long as the test condition evaluates to true.[m
+[32m+[m[32mvar num=0;[m
+[32m+[m[32mwhile (num <=10){[m
+[32m+[m[32m    console.log(num)[m
+[32m+[m[32m    num+=1[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/11.DoWhileLoop.js b/11.DoWhileLoop.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ae986c8[m
+[1m--- /dev/null[m
+[1m+++ b/11.DoWhileLoop.js[m
+[36m@@ -0,0 +1,5 @@[m
+[32m+[m[32mvar num =0;[m
+[32m+[m[32mdo {[m
+[32m+[m[32m    console.log(num);[m
+[32m+[m[32m    num+=1[m
+[32m+[m[32m}while(num <=10);[m
+\ No newline at end of file[m
+[1mdiff --git a/12.forloop.js b/12.forloop.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0ba49c0[m
+[1m--- /dev/null[m
+[1m+++ b/12.forloop.js[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m//write a program to print 1,2,.....10[m
+[32m+[m[32mfor (var num=1;num <=10 ; num++){[m
+[32m+[m[32m    // debugger;[m
+[32m+[m[32m    console.log(num);[m
+[32m+[m[32m}[m
+[32m+[m[32m//write program to print table for given number (8,9,12,15) using for loop?[m
+[32m+[m[32m//8[m
+[32m+[m[32mfor (var num=1; num <=10;num++){[m
+[32m+[m[32m    console.log('8 X ',num,'=',8*num)[m
+[32m+[m[32m}[m
+[32m+[m[32m//using while[m
+[32m+[m[32mvar i=1;[m
+[32m+[m[32mwhile (i <=10){[m
+[32m+[m[32m    console.log('8 X ',i,'=',8*i)[m
+[32m+[m[32m    i+=1[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/13.functions in js.js b/13.functions in js.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9290d75[m
+[1m--- /dev/null[m
+[1m+++ b/13.functions in js.js[m	
+[36m@@ -0,0 +1,27 @@[m
+[32m+[m[32m//adding two numbers[m
+[32m+[m[32mfunction addNumbs(){[m
+[32m+[m[32m    var a=10[m
+[32m+[m[32m    var b=10[m
+[32m+[m[32m    console.log('addition is ',a+b)[m
+[32m+[m[32m}[m
+[32m+[m[32maddNumbs()[m
+[32m+[m
+[32m+[m[32m//function with arguments[m
+[32m+[m[32mfunction addSum(a,b){[m
+[32m+[m[32m    console.log('The sum is ',a+b)[m
+[32m+[m[32m}[m
+[32m+[m[32maddSum()[m
+[32m+[m[32maddSum(10,12)[m
+[32m+[m[32maddSum(12,15)[m
+[32m+[m[32mvar sum=addSum(30,50)[m
+[32m+[m[32msum;[m
+[32m+[m
+[32m+[m[32m//----------------anonymous function and expression----------[m
+[32m+[m[32mvar funExp=function (a,b){[m
+[32m+[m[32m    return total=a+b;[m
+[32m+[m[32m}[m
+[32m+[m[32m//here funExp=function Expression, and rest part is anonymous function.[m
+[32m+[m[32mconsole.log(funExp(13,15))[m
+[32m+[m[32mvar sum1=funExp(30,89)[m
+[32m+[m
+[32m+[m[32mconsole.log(funExp(30,89))[m
+\ No newline at end of file[m
+[1mdiff --git a/14.defaultParameter.js b/14.defaultParameter.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e51503d[m
+[1m--- /dev/null[m
+[1m+++ b/14.defaultParameter.js[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mfunction mult(a,b){[m
+[32m+[m[32m    return a*b[m
+[32m+[m[32m}[m
+[32m+[m[32mconsole.log(mult(3,4))[m
+[32m+[m
+[32m+[m[32m//Default Arguments[m
+[32m+[m[32mfunction mult(a,b=5){[m
+[32m+[m[32m    return a*b[m
+[32m+[m[32m}[m
+[32m+[m[32mconsole.log(mult(3,4))[m
+[32m+[m[32mconsole.log(mult(3))[m
+\ No newline at end of file[m
+[1mdiff --git a/15.fatArrowFunction.js b/15.fatArrowFunction.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..551dbde[m
+[1m--- /dev/null[m
+[1m+++ b/15.fatArrowFunction.js[m
+[36m@@ -0,0 +1,19 @@[m
+[32m+[m[32m//Normal Function[m
+[32m+[m[32mfunction sum(){[m
+[32m+[m[32m    var a=5; var b=7;[m
+[32m+[m[32m    let sum=a+b;[m
+[32m+[m[32m    return `the sum is ${sum}`[m
+[32m+[m[32m}[m
+[32m+[m[32mconsole.log(sum())[m
+[32m+[m
+[32m+[m[32m//-------using fat arrow function-----------------------------------------------------[m
+[32m+[m[32mconst sum1 = () =>{[m
+[32m+[m[32m    var a=5; var b=7;[m
+[32m+[m[32m    let sum=a+b;[m
+[32m+[m[32m    return `the sum is ${sum}`[m
+[32m+[m[32m}[m
+[32m+[m[32mconsole.log('this is from arrow function',sum1())[m
+[32m+[m[32m//if we want only one line expression inside the arrow function, we dont need to to write return keyword[m
+[32m+[m[32m//eg.[m
+[32m+[m[32mconst sum2=() => `the sum is ${(a=5)+(b=6)}`[m
+[32m+[m[32mconsole.log(sum2())[m
+\ No newline at end of file[m
+[1mdiff --git a/16.arrays.js b/16.arrays.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d6fb32f[m
+[1m--- /dev/null[m
+[1m+++ b/16.arrays.js[m
+[36m@@ -0,0 +1,13 @@[m
+[32m+[m[32mvar myFriend=['ramesh','arjuna','vishal','vinod'];[m
+[32m+[m
+[32m+[m[32m//1.)Traversal in array or navigate through an array.[m
+[32m+[m[32mconsole.log(myFriend[1]);[m
+[32m+[m[32mconsole.log(myFriend[0]);[m
+[32m+[m[32mconsole.log(myFriend[2]);[m
+[32m+[m[32mconsole.log(myFriend[3]);[m
+[32m+[m[32mconsole.log(myFriend[4]);[m
+[32m+[m
+[32m+[m[32m//if we want to check the length of elements of an array[m
+[32m+[m[32mconsole.log(myFriend.length)[m
+[32m+[m
+[32m+[m[32m//[m
+[1mdiff --git a/17.ForInLoop n foreach loop.js b/17.ForInLoop n foreach loop.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6c3446b[m
+[1m--- /dev/null[m
+[1m+++ b/17.ForInLoop n foreach loop.js[m	
+[36m@@ -0,0 +1,17 @@[m
+[32m+[m[32m//we use for loop to nevigate[m
+[32m+[m[32mvar myFriend=['vinod','ramesh','arjun','vishal'][m
+[32m+[m[32m//using for loop[m
+[32m+[m[32mfor(var i=0;i<myFriend.length;i++){[m
+[32m+[m[32m    console.log(myFriend[i])[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m//using for in loop[m
+[32m+[m[32mfor (let elements in myFriend){[m
+[32m+[m[32m    console.log(myFriend[elements])[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32m//using for of loop[m
+[32m+[m[32mfor(let element of myFriend){[m
+[32m+[m[32m    console.log(element)[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/2.datatypes.js b/2.datatypes.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3b415d6[m
+[1m--- /dev/null[m
+[1m+++ b/2.datatypes.js[m
+[36m@@ -0,0 +1,13 @@[m
+[32m+[m[32mvar myName = 'Rawindra Kumar';[m
+[32m+[m[32mconsole.log(myName)[m
+[32m+[m[32m// typeof[m
+[32m+[m[32mconsole.log(typeof(myName))[m
+[32m+[m[32m//  -------------------------number Data type----------------------------[m
+[32m+[m[32mvar myAge=26[m
+[32m+[m[32mconsole.log(typeof(myAge))[m[41m [m
+[32m+[m[32m// -----------------------boolean data type----------------------------------[m
+[32m+[m[32mvar iAmRawindra=true;[m
+[32m+[m[32mconsole.log(typeof(iAmRawindra))[m
+[32m+[m[32m// ---------------------undefine data type----------------------------------------[m
+[32m+[m[32mconsole.log(typeof(myBook))[m
+[32m+[m[32m// here we have not defined the variable myBook, so data type will be Undefined[m[41m [m
+[1mdiff --git a/2.firstChalange.js b/2.firstChalange.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2a7cb15[m
+[1m--- /dev/null[m
+[1m+++ b/2.firstChalange.js[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mconsole.log(10+"20") //1020[m
+[32m+[m[32mconsole.log(9-"5"); //bug[m[41m [m
+[32m+[m[32mconsole.log("Java"+"Script") //javascript[m
+[32m+[m[32mconsole.log("Java "+"Script") //java script[m
+[32m+[m[32mconsole.log(" "+" ")//blank space[m
+[32m+[m[32mconsole.log(" "+0)//0[m
+[32m+[m[32mconsole.log("rawindra" - "Kumar") //NaN (not a number)[m
+[32m+[m[32mconsole.log(true+true) //2[m[41m [m
+[32m+[m[32mconsole.log(true+false) //1[m
+[32m+[m[32mconsole.log(false+true)//1[m
+[32m+[m[32mconsole.log(false - true) //-1[m
+\ No newline at end of file[m
+[1mdiff --git a/3.Third Challange.js b/3.Third Challange.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2cbd520[m
+[1m--- /dev/null[m
+[1m+++ b/3.Third Challange.js[m	
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32mconsole.log(NaN===NaN) //false[m
+[32m+[m[32mconsole.log(NaN==NaN) //false[m
+[32m+[m[32mconsole.log(Number.NaN===NaN) //false[m
+[32m+[m[32m// (we get false, bcz NaN is neither a data type nor a Value, it  is a property of global  object)[m[41m [m
+[32m+[m
+[32m+[m[32m// ---------------------------------------------------------------------------------------------------------[m
+[32m+[m[32mconsole.log(isNaN(NaN))//true[m
+[32m+[m[32mconsole.log(Number.isNaN(NaN)) //true[m
+[32m+[m[32mconsole.log(isNaN(Number.NaN))//true[m
+\ No newline at end of file[m
+[1mdiff --git a/4.operators.js b/4.operators.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..40a2f6a[m
+[1m--- /dev/null[m
+[1m+++ b/4.operators.js[m
+[36m@@ -0,0 +1,15 @@[m
+[32m+[m[32m// ---------------Assignment operator-------------------------------------[m
+[32m+[m[32m// an assignment operator assigns a value to its left operand based on the value of its right operand, the sample[m[41m [m
+[32m+[m[32m// assignment operator i SVGPathSegCurvetoQuadraticRel(=)[m
+[32m+[m[32mvar x=20[m
+[32m+[m[32mvar y=30[m
+[32m+[m
+[32m+[m
+[32m+[m[32m// -----------------------------Arithmetic operators------------------------------------[m
+[32m+[m[32m// (an arithmetic operators take numerical values (either literals or variables) as there operands and returns a single value )[m
+[32m+[m
+[32m+[m[32mconsole.log(3+3); //plus[m
+[32m+[m[32mconsole.log(10-5);//minus[m
+[32m+[m[32mconsole.log(20/5);//division[m
+[32m+[m[32mconsole.log(5*6);//multiplication[m
+[32m+[m[32mconsole.log(81%8);//modulo[m
+\ No newline at end of file[m
+[1mdiff --git a/5challange.js b/5challange.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c99369b[m
+[1m--- /dev/null[m
+[1m+++ b/5challange.js[m
+[36m@@ -0,0 +1,19 @@[m
+[32m+[m[32m// 1.)what will be the output of 3**3[m[41m [m
+[32m+[m[32mconsole.log(3**3)[m
+[32m+[m[32m// 2.)What will be the output when we add a number and a String.[m[41m [m
+[32m+[m[32mconsole.log(2+"Rawindra")[m
+[32m+[m[32m//write a program to swap two numbers?[m
+[32m+[m[32mvar a=3;[m
+[32m+[m[32mvar b=4;[m
+[32m+[m[32mvar c=a;[m
+[32m+[m[32m// a=b;[m
+[32m+[m[32m// b=c;[m
+[32m+[m[32m// console.log('value of a is ',a)[m
+[32m+[m[32m// console.log('value of b is ',b)[m
+[32m+[m
+[32m+[m[32m//write a program to swap two numbers without using third variable?[m
+[32m+[m[32mb=a+b;//b=7[m
+[32m+[m[32ma=b-a; //a=4[m
+[32m+[m[32mb=b-a;//b=3[m
+[32m+[m[32mconsole.log('Value of a after swaping',a)[m
+[32m+[m[32mconsole.log('Value of b after swaping',b)[m
+\ No newline at end of file[m
+[1mdiff --git a/6.flowcontrol and loops.js b/6.flowcontrol and loops.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e829edc[m
+[1m--- /dev/null[m
+[1m+++ b/6.flowcontrol and loops.js[m	
+[36m@@ -0,0 +1,23 @@[m
+[32m+[m[32m// 1.)if else statement -----------------------------------------------[m
+[32m+[m[32mvar tommr='rain'[m
+[32m+[m[32mif (tommr=='rain'){[m
+[32m+[m[32m    console.log('Take an umberella')[m
+[32m+[m[32m}else{[m
+[32m+[m[32m    console.log('no need to take umberella')[m
+[32m+[m[32m}[m
+[32m+[m[32m//2.)write a program that works out whether is a given year is a leap year or not?[m
+[32m+[m[32mvar year=2020;[m
+[32m+[m[32mif(year%4 ===0){[m
+[32m+[m[32m    if(year%100===0){[m
+[32m+[m[32m        if(year%400===0){[m
+[32m+[m[32m            console.log('the year '+year+" is a leap year")[m
+[32m+[m[32m        }else{[m
+[32m+[m[32m            console.log('the Year '+year+' is not a leap year')[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }else{[m
+[32m+[m[32m        console.log('The Year '+year+" is leap year")[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m}else{[m
+[32m+[m[32m    console.log('the year '+year+" is not leap year")[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/7.terniaryoperator.js b/7.terniaryoperator.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..66cbac6[m
+[1m--- /dev/null[m
+[1m+++ b/7.terniaryoperator.js[m
+[36m@@ -0,0 +1,13 @@[m
+[32m+[m[32mvar age=28;[m
+[32m+[m[32mif (age > 18){[m
+[32m+[m[32m    console.log('you are eligible to vote')[m
+[32m+[m[32m}else{[m
+[32m+[m[32m    console.log('you are not eligible to vote')[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m// -----------------------using terniary operator------------------------------[m
+[32m+[m[32mvar msg=(age>18)?'you can vote':'you cant vote';[m
+[32m+[m[32mconsole.log(msg)[m
+[32m+[m
+[32m+[m[32m// ------------------or-------------------------------------------------------------[m
+[32m+[m[32mconsole.log((age > 18) ?'you can vote':'you cant vote');[m
+\ No newline at end of file[m
+[1mdiff --git a/8.switchCases.js b/8.switchCases.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d1a99a4[m
+[1m--- /dev/null[m
+[1m+++ b/8.switchCases.js[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m[32mvar area='circle'[m
+[32m+[m[32mvar PI=3.142, l=5, b=4,r=3;[m
+[32m+[m[32mswitch(area){[m
+[32m+[m[32m    case 'circle':[m
+[32m+[m[32m        console.log('The area of the circle ',PI*r**2);[m
+[32m+[m[32m    case 'triangle':[m
+[32m+[m[32m        console.log('the area of the triangle is',(l*b)/2);[m
+[32m+[m[32m    case  'rectangle':[m
+[32m+[m[32m        console.log('The area of the rectangle',l*b)[m
+[32m+[m[32m    default:[m
+[32m+[m[32m        console.log('please enter valid choice')[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/9.breakStatement.js b/9.breakStatement.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..90355aa[m
+[1m--- /dev/null[m
+[1m+++ b/9.breakStatement.js[m
+[36m@@ -0,0 +1,20 @@[m
+[32m+[m[32m// as we can see that the swinch statement returning all the cases value, but we want only Circle's Area.[m
+[32m+[m[32m//so we will use Break Statement[m
+[32m+[m[32m//BREAK STATEMENT:Terminates the current loop , switch, or label statement and transfers, program control to the[m[41m [m
+[32m+[m[32m// statement following the terminated statement.[m[41m [m
+[32m+[m[32mvar area='circle'[m
+[32m+[m[32mvar PI=3.142, l=5, b=4,r=3;[m
+[32m+[m[32mswitch(area){[m
+[32m+[m[32m    case 'circle':[m
+[32m+[m[32m        console.log('The area of the circle ',PI*r**2);[m
+[32m+[m[32m        break;[m
+[32m+[m[32m    case 'triangle':[m
+[32m+[m[32m        console.log('the area of the triangle is',(l*b)/2);[m
+[32m+[m[32m        break;[m
+[32m+[m[32m    case  'rectangle':[m
+[32m+[m[32m        console.log('The area of the rectangle',l*b)[m
+[32m+[m[32m        break;[m
+[32m+[m[32m    default:[m
+[32m+[m[32m        console.log('please enter valid choice')[m
+[32m+[m[41m        [m
+[32m+[m[32m}[m
+\ No newline at end of file[m
