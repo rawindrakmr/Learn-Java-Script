@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: red;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    ul li {
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#news">About Us</a>
+    <a href="#news">Our Services</a>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <ul class="this" id="myul">
+          <li><a href="#">Mobiles</a> </li>
+          <li><a href="#">Homes</a> </li>
+        </ul>
+        <!-- <a id="myid"></a> -->
+        <!-- <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a> -->
+      </div>
+    </div>
+  </div>
+
+  <h3>Here creating a Dropdown Menu inside a Navigation Bar</h3>
+  <p>Hover over the dropdown link to see the dropdown menu.</p>
+
+
+  <script>
+    // var links = {"link1":"Electronics",
+    //             "link2":"Sports",
+    //             "link3":"Fashion"};
+    // for (var i in links){
+    //     document.getElementById("myid").innerHTML += links[i]+"<br/>" ;
+    // }
+
+
+    let ul = document.querySelector('ul.this');
+    var links = {
+      value: [{ "category": "Electronics", "link": "https://www.flipkart.com/electronics-big-savings-days-store" },
+      { "category": "Sports", "link": "https://www.flipkart.com/sports-hub-store" },
+      { "category": "Fashion", "link": "https://www.amazon.in/b?ie=UTF8&node=6648217031" }]
+    };
+
+    for (var link in links.value) {
+      console.log(links.value[link].category)
+
+
+      let element = document.createElement('li');
+
+      // element.innerHTML = '<a href="https://www.flipkart.com/">Fashion</a>' ;
+      //element.innerHTML = `<a href="${links.link1[1]}">${links.link1[0]}</a>` ;
+      element.innerHTML = `<a href="${links.value[link].link}">${links.value[link].category}</a>`;
+
+      ul.appendChild(element);
+
+    }
+  </script>
+
+</body>
+
+</html>
